@@ -21,8 +21,8 @@ There 4 main sections:
   2. Model training: Starting training model (SVM)
   3. Model evaluation.
   4. Saved model. (I already provied available trained model "modelsvm.pkl")
-5. Load Data store: loading data about Transportation, HR, IT.
-6. Pending tickets: get results if "app" section is imported question.
+3. Load Data store: loading data about Transportation, HR, IT.
+4. Pending tickets: get results if "app" section is imported question.
 ```
 
 ![image](https://github.com/quangtn266/ATTClassificationTool/assets/50879191/c741ee2a-d536-479f-93fe-c10db9007eb5)
