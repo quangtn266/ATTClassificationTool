@@ -70,10 +70,10 @@ with tabs[2]:
     st.write("here we evaluate the model...")
     button = st.button("Evaluate model", key="Evaluation")
 
-    if button
+    if button:
         with st.spinner('Wait for it ...'):
             accuracy_score = get_score(st.session_state['svm_classifier'],
-                    st.session_state['setences_test'], st.session_state['label_test'])
+                    st.session_state['sentences_test'], st.session_state['labels_test'])
             st.success(f'Validation accuracy is {100*accuracy_score}%!')
 
             st.write("A sample run: ")

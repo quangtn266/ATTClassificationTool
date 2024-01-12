@@ -33,7 +33,7 @@ def main():
 
             # Build the vector store (Push the PDF data embeddings)
             push_to_pinecone(Pinecone_API_Key, Pinecone_environment,
-                Pinecone_index, "tickets", embeddings, docs_chunks)
+                Pinecone_index, embeddings, docs_chunks)
 
         st.success("Succesfully pushed the embeddings to Pinecone")
 

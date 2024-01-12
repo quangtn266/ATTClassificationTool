@@ -31,6 +31,11 @@ def split_data(text):
     docs_chunks = text_splitter.create_documents(docs)
     return docs_chunks
 
+# create embeddings instance
+def create_embeddings_load_data():
+    embeddings = SentenceTransformerEmbeddings(model_name=model_ChatGPT)
+    return embeddings
+    
 
 # Function to push data to Pinecone
 def push_to_pinecone(pinecone_apikey, pinecone_environment, pinecone_index_name, embeddings, docs):
@@ -66,9 +71,8 @@ def create_embeddings(df, embeddings):
 # Splitting the data into train & test
 def split_train_test_data(df_sample):
     # split into training and testing sets.
-    sentences_train, sentences_test = labels_train, labels_test = train_test_split(
-        list(df_sample[2]), list(df_sample[1]), test_size=0.25, random_state=0
-    )
+    sentences_train, sentences_test , labels_train, labels_test = train_test_split(
+        list(df_sample[2]), list(df_sample[1]), test_size=0.25, random_state=0)
     print(len(sentences_train))
     return sentences_train, sentences_test, labels_train, labels_test
 
